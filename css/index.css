@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+    letter-spacing: .6em;
+    background-image: url("../img/pokemon-battle-field-background-6-300x200.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar{
+    background-color: blue;
+}
+
+#title {
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+}
+
+#battle{
+    margin-top: -4em;
+}
