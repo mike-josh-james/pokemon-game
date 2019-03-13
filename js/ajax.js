@@ -15,7 +15,6 @@
     let player1Turn = true;
     let player2Turn = false;
     let gameIsWon = false;
-    //random number between 1 and 0
     // var audio = new Audio('../mp3/battlemusic.mp3');
 
     // console.log(xhr);

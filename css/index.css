@@ -11,6 +11,10 @@ body {
     background-color: blue;
 }
 
+.btn {
+    background-color: blue;
+}
+
 #title {
     font-family: 'Alfa Slab One', cursive;
     font-size: 2em;
@@ -20,4 +24,8 @@ body {
 
 #battle{
     margin-top: -4em;
+}
+
+#contianer2 {
+    margin-top: -12em;
 }
