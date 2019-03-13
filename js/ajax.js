@@ -64,28 +64,38 @@
 
 function loadCardData(data) {
     for (let i in data) {
-        card1 += `<img alt="" src="${data.cards[55].imageUrl}"/>`;
-        card2 += `<img alt="" src="${data.cards[69].imageUrl}"/>`;
-        player1Hp = data.cards[55].hp;
-        player2Hp = data.cards[69].hp;
-        player1Attack = data.cards[55].attacks[0].damage;
-        player1Attack2 = data.cards[55].attacks[1].damage;
-        player2Attack = data.cards[69].attacks[0].damage;
-        player2Attack2 = data.cards[69].attacks[1].damage;
+        let arr = [6,55,69,17,37,73];
+        let random = Math.floor(Math.random() * 5);
+        let random2 = Math.floor(Math.random() * 5);
+        let randomFromArr = arr[random];
+        let randomFromArr2 = arr[random2];
+        card1 += `<img alt="" src="${data.cards[randomFromArr].imageUrl}"/>`;
+        card2 += `<img alt="" src="${data.cards[randomFromArr2].imageUrl}"/>`;
+        player1Hp = data.cards[randomFromArr].hp;
+        player2Hp = data.cards[randomFromArr2].hp;
+        player1Attack = data.cards[randomFromArr].attacks[0].damage;
+        player1Attack2 = data.cards[randomFromArr].attacks[1].damage;
+        player2Attack = data.cards[randomFromArr2].attacks[0].damage;
+        player2Attack2 = data.cards[randomFromArr2].attacks[1].damage;
         console.log(player1Attack2);
     }
     $('#card1').html(card1);
     $('#card2').html(card2);
     $('#hp-bar-one').html("HP " + player1Hp);
     $('#hp-bar-two').html("HP " + player2Hp);
-    $('#C1attack1').html(player1Attack);
-    $('#C2attack1').html(player2Attack);
+    $('#C1attack1').html('Attack');
+    $('#C2attack1').html('Attack');
+}
+
+function choosingPokemon(){
+    let arr = [4,6,7,10];
+    let random = Math.floor(Math.random() * 11);
 }
 
 function checkPlayerHp() {
-    if (player2Hp == 0) {
+    if (player2Hp <= 0) {
         alert("Player 1 wins!")
-    } else if (player1Hp == 0) {
+    } else if (player1Hp <= 0) {
         alert("Player2 wins!")
     }
 }
