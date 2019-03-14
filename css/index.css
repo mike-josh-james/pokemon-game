@@ -9,6 +9,7 @@ body {
 
 .navbar{
     background-color: blue;
+    margin-top: -60px;
 }
 
 .btn {
@@ -28,4 +29,9 @@ body {
 
 #contianer2 {
     margin-top: -12em;
+}
+
+#playAudio {
+    background-color: transparent;
+    color: transparent;
 }

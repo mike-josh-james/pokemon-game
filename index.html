@@ -20,7 +20,14 @@
     </head>
     <body>
 
-        <!-- navbar -->
+    <iframe src="audio/" allow="autoplay" style="display:none" id="iframeAudio">
+    </iframe>
+
+    <audio autoplay loop  id="playAudio" controls>
+        <source src="audio/battle.mp3">
+    </audio>
+
+    <!-- navbar -->
         <div class="navbar navbar-expand-md">
             <div id="title" class="mx-auto"><a href="#"><img src="https://fontmeme.com/permalink/190311/30b9d1edcfcc881b287ae65ed3721432.png" alt="pokemon-font" border="0"></a></div>
         </div>
@@ -29,7 +36,7 @@
         P1
         <div id="container1" class="container-fluid">
             <div class="row">
-                <div class="col-md-2 offset-md-8">
+                <div class="col-sm-2 offset-sm-8">
                     <h3 class="ml-5" id="hp-bar-one"></h3>
                     <button id="C1attack1" class="btn ml-5">attack1</button><br><br>
                     <div id="card1"></div>
@@ -49,7 +56,7 @@
         P2
         <div id="contianer2" class="container-fluid">
             <div class="row ">
-                <div class="col-md-2 offset-md-2">
+                <div class="col-sm-2 offset-sm-2">
                         <div class="ml-4">
                             <h3 class="ml-4" id="hp-bar-two"></h3>
                             <button id="C2attack1" class="btn ml-5">attack1</button><br><br>
