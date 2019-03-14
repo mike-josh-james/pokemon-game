@@ -15,52 +15,55 @@
     let player1Turn = true;
     let player2Turn = false;
     let gameIsWon = false;
+    let still = false;
     // var audio = new Audio('../mp3/battlemusic.mp3');
 
     // console.log(xhr);
 
-    // document done function
-    xhr.done(function(data) {
-        console.log(data);
-        loadCardData(data);
-        // audio.play();
-        hideElementsBasedOnPlayerTurn();
-        $("#C1attack1").click(function() {
-            let randomNum = Math.floor(Math.random() * Math.floor(2));
-            // choosing attack 1 or 2 base off random number
-            if(randomNum === 0){
-                // player2Hp -= player1Attack;
-                player2Hp = player2Hp - player1Attack;
-                $('#hp-bar-two').html("HP " + player2Hp);
-            } else if( randomNum === 1){
-                // player2Hp -= player1Attack2;
-                player2Hp = player2Hp - player1Attack2;
-                $('#hp-bar-two').html("HP " + player2Hp);
-            }
-
-            player2Turn = true;
-            player1Turn = false;
+        // document done function
+        xhr.done(function (data) {
+            console.log(data);
+            loadCardData(data);
+            // audio.play();
             hideElementsBasedOnPlayerTurn();
-            checkPlayerHp();
+            $("#C1attack1").click(function () {
+                let randomNum = Math.floor(Math.random() * Math.floor(2));
+                // choosing attack 1 or 2 base off random number
+                if (randomNum === 0) {
+                    // player2Hp -= player1Attack;
+                    player2Hp = player2Hp - player1Attack;
+                    $('#hp-bar-two').html("HP " + player2Hp);
+                } else if (randomNum === 1) {
+                    // player2Hp -= player1Attack2;
+                    player2Hp = player2Hp - player1Attack2;
+                    $('#hp-bar-two').html("HP " + player2Hp);
+                }
+
+                player2Turn = true;
+                player1Turn = false;
+                hideElementsBasedOnPlayerTurn();
+                checkPlayerHp();
             });
-        $("#C2attack1").click(function(){
-            let randomNum = Math.floor(Math.random() * Math.floor(2));
-            // player1Hp -= player2Attack;
-            if(randomNum === 0){
-                player1Hp = player1Hp - player2Attack;
-                console.log(player2Attack);
-                $('#hp-bar-one').html("HP " + player1Hp);
-            } else if( randomNum === 1){
-                player1Hp = player1Hp - player2Attack2;
-                $('#hp-bar-one').html("HP " + player1Hp);
-            }
-            player2Turn = false;
-            player1Turn = true;
-            hideElementsBasedOnPlayerTurn();
-            checkPlayerHp();
-        });
+            $("#C2attack1").click(function () {
+                let randomNum = Math.floor(Math.random() * Math.floor(2));
+                // player1Hp -= player2Attack;
+                if (randomNum === 0) {
+                    player1Hp = player1Hp - player2Attack;
+                    console.log(player2Attack);
+                    $('#hp-bar-one').html("HP " + player1Hp);
+                } else if (randomNum === 1) {
+                    player1Hp = player1Hp - player2Attack2;
+                    $('#hp-bar-one').html("HP " + player1Hp);
+                }
+                player2Turn = false;
+                player1Turn = true;
+                hideElementsBasedOnPlayerTurn();
+                checkPlayerHp();
+            });
 
-    }); // end of done function
+        }); // end of done function
+
+
 
 function loadCardData(data) {
     for (let i in data) {
@@ -94,9 +97,11 @@ function choosingPokemon(){
 
 function checkPlayerHp() {
     if (player2Hp <= 0) {
-        alert("Player 1 wins!")
+        alert("Player 1 wins!");
+        window.location.reload(true);
     } else if (player1Hp <= 0) {
-        alert("Player2 wins!")
+        alert("Player2 wins!");
+        window.location.reload(true);
     }
 }
 
