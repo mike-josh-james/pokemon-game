@@ -1,77 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>pokemon game</title>
+<head>
+    <title>pokemon game</title>
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- css link -->
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <audio id="my_audio" src="audio/battleMusic.mp3" loop="loop"></audio>
 
-        <!-- Meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-        <!-- css link -->
-        <link type="text/css" rel="stylesheet" href="./css/index.css">
-
-        <!-- google fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
-
-    </head>
-    <body>
-
-        <!-- navbar -->
-        <div class="navbar navbar-expand-md">
-            <div id="title" class="mx-auto"><a href="#"><img src="https://fontmeme.com/permalink/190311/30b9d1edcfcc881b287ae65ed3721432.png" alt="pokemon-font" border="0"></a></div>
-        </div>
-
-        <!-- card 1 -->
-        P1
-        <div id="container1" class="container-fluid">
-            <div class="row">
-                <div class="col-md-2 offset-md-8">
-                    <h3 class="ml-5" id="hp-bar-one"></h3>
-                    <button id="C1attack1" class="btn ml-5">attack1</button><br><br>
-                    <div id="card1"></div>
-                </div>
+    <div id="logo"><img src="./img/pokelogo_50.png" alt="pokemon-font" border="0"></div>
+    <div class="winner"></div>
+    <!-- card 1 -->
+    <div class = "row">
+        <div class="player-one">
+            <h3 id="hp-bar-one"></h3>
+            <div class="player1Damage"></div>
+            <div style="position:relative">
+                <div id="card1" style="position:absolute; top:1px"></div>
             </div>
+            <div class="attk-btn rounded"><button disabled title="Click battle to play!" id="C1attack1" class="btn">attack1</button></div>
         </div>
-
-        <!-- Battle Pic -->
-        <div class="container">
-            <div class="row">
-                <div class="mx-auto">
-                    <a href="#"><img id="battle" src="https://fontmeme.com/permalink/190312/f57c3bbd1d549e71b538687e024fd5cc.png" alt="pokemon-font" border="0"></a>                </div>
-            </div>
+        <!-- Battle Btn -->
+        <div class="battle-img">
+            <button id="battle-btn"><a href="#"><img id="battle" src="https://fontmeme.com/permalink/190312/f57c3bbd1d549e71b538687e024fd5cc.png" alt="pokemon-font" border="0"></a> </button>
         </div>
-
+        <div class="victory-dance"></div>
         <!-- card 2 -->
-        P2
-        <div id="contianer2" class="container-fluid">
-            <div class="row ">
-                <div class="col-md-2 offset-md-2">
-                        <div class="ml-4">
-                            <h3 class="ml-4" id="hp-bar-two"></h3>
-                            <button id="C2attack1" class="btn ml-5">attack1</button><br><br>
-                        </div>
-                        <div id="card2"></div>
-                </div>
+        <div class="player-two">
+            <h3 id="hp-bar-two"></h3><div class="player2Damage"></div>
+            <div style="position:relative">
+                <div id="card2" style="position:absolute; top:1px"></div>
             </div>
+            <div class="attk-btn rounded"><button id="C2attack1" class="btn"></button></div>
         </div>
+    </div>
+    <button id="reset-btn" class="btn-success rounded">Play Again?</button>
 
 
 
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script
-        src="http://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-        <!-- js links -->
-        <script src="./js/ajax.js"></script>
-        <script src="./js/style.js"></script>
 
-    </body>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+            src="http://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- js links -->
+    <script src="./js/ajax.js"></script>
+    <script src="./js/style.js"></script>
+</div>
+</body>
+
 </html>
