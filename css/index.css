@@ -2,36 +2,87 @@ body {
     margin: 0;
     padding: 0;
     letter-spacing: .6em;
-    background-image: url("../img/pokemon-battle-field-background-6-300x200.png");
+
+    background-image: url("../img/nightbackground.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.navbar{
+.btn {
     background-color: blue;
     margin-top: -60px;
 }
 
-.btn {
-    background-color: blue;
+#reset-btn{
+    display: none;
+
 }
 
-#title {
-    font-family: 'Alfa Slab One', cursive;
-    font-size: 2em;
-    margin: 0;
-    padding: 0;
+#logo{
+    margin-left: 33%
 }
 
-#battle{
-    margin-top: -4em;
+#battle {
+    margin-top: 65%;
+    margin-left: 55%;
 }
 
-#contianer2 {
-    margin-top: -12em;
-}
-
-#playAudio {
+#battle-btn{
     background-color: transparent;
     color: transparent;
+    border: none;
 }
+
+.winner {
+    display: none;
+    margin-left: 31%;
+
+}
+
+.attk-btn{
+    margin-left: 5em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    position:absolute;
+    top: 67%;
+}
+
+#hp-bar-one{
+    display: inline;
+    margin-left: 2em;
+}
+
+.player-one{
+    margin-left: 5%
+}
+
+#hp-bar-two{
+    display: inline;
+    margin-left: 2em;
+    margin-bottom: 2em;
+}
+
+.player-two{
+    margin-left: 21%;
+}
+
+.player1Damage{
+    position: absolute;
+    left: 29%;
+    top: 20%;
+
+}
+
+.player2Damage{
+    position: absolute;
+    right: 34%;
+    top: 20%;
+}
+
+.victory-dance{
+    margin-left: 40%;
+    margin-top: 10%;
+    display: none;
+}
+
+
