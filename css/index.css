@@ -6,6 +6,7 @@ body {
     background-image: url("../img/nightbackground.png");
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
 }
 
 .btn {
